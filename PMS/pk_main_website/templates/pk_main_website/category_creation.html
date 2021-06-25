@@ -1,0 +1,44 @@
+{%  extends 'pk_main_website/base.html' %}
+
+{% block content %}
+
+<div id="layoutSidenav_content"> 
+    <main>
+        <div class="container-fluid">
+            <!-- <h1 class="mt-4">Boards</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ user_name }} | Boards</li>
+            </ol> -->
+        
+            <div class="column">
+                
+                <div class="center-column" style="width: 500px;">
+                    <h3>Category Creation</h3>
+                    <form method="POST" action="">
+                        {% csrf_token %}
+
+                        <!-- <h3>Board Creation</h3> <br> -->
+
+                        
+                        <span style="width: 200px;" >Title: {{category_form.category_title}} </span>    <br> <br>
+                        
+                        Owner: {{category_form.owner}} <br> <br>
+                        Board : {{category_form.board}}
+
+                        <input type="submit" name="Update Task" value="Create">
+                        
+                    </form>
+                </div>
+
+                
+
+                
+
+            </div>     
+        </div>
+    </main>
+</div>
+</div> 
+
+{% endblock %}
+

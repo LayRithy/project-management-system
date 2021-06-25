@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- link to the static file of style css -->
+<link  rel="stylesheet" href="{% static '/css/task.css' %}" />
+
+<div class="center-column">
+
+    <h2>Update Task</h2>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        Task Name: {{form.task_name}} <br> <br>
+        Task owner: {{form.owner}} <br> <br>
+        Category: {{form.category}} <br><br>
+        Description: {{form.description}} <br><br>
+        Attachment: {{form.attachment}} <br><br>
+        Complete: {{form.complete}} <br><br>
+        
+        <input type="submit" name="Update Task" value="Update">
+
+    </form>
+</div>

@@ -1,0 +1,44 @@
+{%  extends 'pk_main_website/base.html' %}
+
+{% block content %}
+
+<div id="layoutSidenav_content"> 
+    <main>
+        <div class="container-fluid">
+            <!-- <h1 class="mt-4">Boards</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ user_name }} | Boards</li>
+            </ol> -->
+
+            <div class="column">
+
+                <h2>User Profile</h2>
+
+                    <h3>
+                    Username: {{ user_name }} 
+                    </h3>
+
+                    <h4>Email: {{ email }}</h4>
+
+                    <ul>
+                        {% for movie in movies %}
+                        <li>{{ movie }}</li>
+                        {% endfor %}
+                    
+                    </ul>
+                    <h3>{{ movies }}</h3>
+
+            </div>     
+        </div>
+    </main>
+</div>
+</div> 
+
+{% endblock %}
+
+
+
+
+
+    
+

@@ -1,0 +1,58 @@
+{%  extends 'pk_main_website/base.html' %}
+{% block content %}
+
+
+<div id="layoutSidenav_content"> 
+    <main>
+        <div class="container-fluid">
+            <!-- <h1 class="mt-4">Boards</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ user_name }} | Boards</li>
+            </ol> -->
+            <h1>Category</h1>
+            <nav class="navbar navbar-light bg-light">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Invite</button> -->
+    
+    
+                    <!-- delete board  -->
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url 'category_creation' %}">Create new Category</a></button>
+    
+            </nav>
+
+            <div class="row">
+
+                {% for category in categories %}
+
+                    <div class="center-column" style="width: 300px; margin-left: 50px;">
+                            <h4>{{ category.category_title }}</h4>
+
+                            {% for task in category.item_set.all %}
+                            
+                                <!-- <h5>{{ task.task_name }}</h5> -->
+
+                                <a href="{% url 'task' task_id=task.id %}">{{ task.task_name }}</a>
+
+                            {% endfor%}
+
+                            <br><br>
+                            <!-- <h5>hi</h5> -->
+                            <a class="btn btn-info btn-info" href="{% url 'category_detail' category.id %}">Details</a>
+                            <a class="btn btn-info btn-danger" href="{% url 'delete_category' category.id %}">Delete</a>
+                    </div>
+                
+                    
+
+                {% endfor %}
+
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" style="height: 50px; margin-top: 50px;" type="submit"><a href="{% url 'category_creation' %}">Create new Category</a></button> -->
+
+
+                
+
+            </div>     
+        </div>
+    </main>
+</div>
+</div> 
+
+{% endblock %}

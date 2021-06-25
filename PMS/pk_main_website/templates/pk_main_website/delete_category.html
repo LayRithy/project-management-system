@@ -1,0 +1,59 @@
+{%  extends 'pk_main_website/base.html' %}
+{% block content %}
+
+
+<div id="layoutSidenav_content"> 
+    <main>
+        <div class="container-fluid">
+            <!-- <h1 class="mt-4">Boards</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ user_name }} | Boards</li>
+            </ol> -->
+            <h1> Delete Category</h1>
+            <nav class="navbar navbar-light bg-light">
+                <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Invite</button> -->
+    
+    
+                    <!-- delete board  -->
+                    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url 'category_creation' %}">Create new Category</a></button> -->
+    
+            </nav>
+
+            <div class="center-column">
+
+               <p>Arn you sure you want to delete category "{{ category }}"?</p>
+
+                <form method="POST" action="">
+                    {% csrf_token %}
+
+                    <div >
+                        <a style="width: 100px; height: 40px;" class="btn btn-sm btn-info" href="{% url 'category' %}">Cancel</a>
+    
+    
+                    <form method="POST" action="">
+                        {% csrf_token %}
+    
+                        <input style="width: 100px; height: 40px;" class="btn btn-sm btn-danger" type="submit" name="date task" value="Confirm">
+    
+                    </form>
+                    </div>
+                    
+                </form>
+
+                
+                                
+
+                
+
+            </div>     
+        </div>
+    </main>
+</div>
+</div> 
+
+{% endblock %}
+
+
+
+<!-- {% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

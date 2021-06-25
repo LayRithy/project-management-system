@@ -1,0 +1,8 @@
+asgiref    3.3.1
+Django     3.0
+pip        20.2.2
+pytz       2020.5
+setuptools 49.6.0
+sqlparse   0.4.1
+wheel      0.35.1
+

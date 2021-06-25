@@ -1,0 +1,39 @@
+{%  extends 'pk_main_website/base.html' %}
+
+{% block content %}
+
+<div id="layoutSidenav_content"> 
+    <main>
+        <div class="container-fluid">
+            <!-- <h1 class="mt-4">Boards</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">{{ user_name }} | Boards</li>
+            </ol> -->
+           
+
+            <div class="center-column">
+                    <h3>Board Creation</h3> <br>
+                <form method="POST" action="">
+                    {% csrf_token %}
+
+                   
+
+                    Board Title: {{board_form.board_title}} <br> <br>
+                    Board Owner: {{board_form.owner}} <br> <br>
+
+                    <input type="submit" name="Update Task" value="Create">
+                    
+                </form>
+
+              
+
+
+               
+
+            </div>     
+        </div>
+    </main>
+</div>
+</div> 
+
+{% endblock %}
